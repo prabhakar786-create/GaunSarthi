@@ -1,96 +1,96 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
+
 <title>Gaon Sarthi</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<style>
-body{
-font-family:Arial;
-margin:0;
-background:#f5f5f5;
-}
+<link rel="stylesheet" href="css/style.css">
 
-header{
-background:green;
-color:white;
-padding:15px;
-text-align:center;
-}
+<script src="js/lang.js"></script>
 
-.menu{
-background:#222;
-padding:10px;
-text-align:center;
-}
-
-.menu a{
-color:white;
-margin:10px;
-text-decoration:none;
-}
-
-.service{
-background:white;
-margin:20px;
-padding:20px;
-border-radius:8px;
-text-align:center;
-}
-
-button{
-background:green;
-color:white;
-padding:10px 20px;
-border:none;
-border-radius:5px;
-font-size:16px;
-}
-</style>
 </head>
 
 <body>
 
 <header>
-<h1>Gaon Sarthi</h1>
-<p>Delivery | Bike Taxi | Car Taxi</p>
+
+<h1 id="title">Gaon Sarthi</h1>
+
+<p id="tagline">Delivery | Bike Taxi | Car Taxi</p>
+
+<div class="lang">
+
+<button onclick="setLang('en')">English</button>
+
+<button onclick="setLang('hi')">हिंदी</button>
+
+</div>
+
 </header>
 
 <div class="menu">
+
 <a href="index.html">Home</a>
+
 <a href="delivery.html">Delivery</a>
+
 <a href="bike.html">Bike Taxi</a>
+
 <a href="car.html">Car Taxi</a>
+
 <a href="driver.html">Driver Join</a>
+
 </div>
 
-<div class="service">
-<h2>Village Delivery</h2>
-<p>किराना, सब्जी, दवा घर तक</p>
+<div class="container">
 
-<a href="https://wa.me/91XXXXXXXXXX?text=Delivery%20Order">
+<div class="card">
+
+<img src="images/delivery.jpg">
+
+<h2 id="deliveryTitle">Village Delivery</h2>
+
+<p id="deliveryText">Groceries delivered to your village</p>
+
+<a href="https://wa.me/919999999999?text=Delivery Order">
+
 <button>Order Now</button>
+
 </a>
 
 </div>
 
-<div class="service">
-<h2>Bike Taxi</h2>
-<p>गांव से बाजार जल्दी पहुंचे</p>
+<div class="card">
 
-<a href="https://wa.me/91XXXXXXXXXX?text=Bike%20Taxi">
-<button>Book Ride</button>
+<img src="images/bike.jpg">
+
+<h2 id="bikeTitle">Bike Taxi</h2>
+
+<p id="bikeText">Quick village transport</p>
+
+<a href="https://wa.me/919999999999?text=Bike Taxi Booking">
+
+<button>Book Bike</button>
+
 </a>
 
 </div>
 
-<div class="service">
-<h2>Car Taxi</h2>
-<p>शादी, अस्पताल, रेलवे स्टेशन</p>
+<div class="card">
 
-<a href="https://wa.me/91XXXXXXXXXX?text=Car%20Taxi">
+<img src="images/car.jpg">
+
+<h2 id="carTitle">Car Taxi</h2>
+
+<p id="carText">Car service for travel</p>
+
+<a href="https://wa.me/919999999999?text=Car Taxi Booking">
+
 <button>Book Car</button>
+
 </a>
+
+</div>
 
 </div>
 
