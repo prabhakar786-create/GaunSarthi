@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ride Booking</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h2>Book Ride</h2>
+
+<form id="rideForm">
+
+Pickup Location<br>
+<input type="text" id="pickup"><br><br>
+
+Drop Location<br>
+<input type="text" id="drop"><br><br>
+
+Vehicle Type<br>
+<select id="vehicle">
+<option>Bike</option>
+<option>Auto</option>
+<option>Car</option>
+</select>
+
+<br><br>
+
+Mobile Number<br>
+<input type="text" id="phone">
+
+<br><br>
+
+<button type="submit">Book Ride</button>
+
+</form>
+
+<script>
+
+document.getElementById("rideForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+fetch("YOUR_GOOGLE_SCRIPT_URL",{
+
+method:"POST",
+
+body:JSON.stringify({
+
+pickup:document.getElementById("pickup").value,
+
+drop:document.getElementById("drop").value,
+
+vehicle:document.getElementById("vehicle").value,
+
+phone:document.getElementById("phone").value
+
+})
+
+})
+
+alert("Ride Request Sent")
+
+})
+
+</script>
+
+</body>
+</html>
