@@ -1,78 +1,32 @@
-function setLang(lang){
+﻿function setLang(lang){
 
 if(lang==="hi"){
-document.getElementById
+document.getElementById("title").innerHTML="गांव सारथी";
+document.getElementById("tagline").innerHTML="डिलीवरी | बाइक टैक्सी | कार टैक्सी";
 
-("title").innerHTML="गांव सारथी";
-document.getElementById
+document.getElementById("deliveryTitle").innerHTML="गांव डिलीवरी";
+document.getElementById("deliveryText").innerHTML="किराना, सब्जी और दवा घर तक";
 
-("tagline").innerHTML="डिलीवरी | बाइक टैक्सी | कार 
+document.getElementById("bikeTitle").innerHTML="बाइक टैक्सी";
+document.getElementById("bikeText").innerHTML="गांव से बाजार जल्दी पहुंचे";
 
-टैक्सी";
-
-document.getElementById
-
-("deliveryTitle").innerHTML="गांव डिलीवरी";
-document.getElementById
-
-("deliveryText").innerHTML="किराना, सब्जी और 
-
-दवा घर तक";
-
-document.getElementById
-
-("bikeTitle").innerHTML="बाइक टैक्सी";
-document.getElementById
-
-("bikeText").innerHTML="गांव से बाजार जल्दी पहुंचे";
-
-document.getElementById
-
-("carTitle").innerHTML="कार टैक्सी";
-document.getElementById
-
-("carText").innerHTML="लंबी दूरी यात्रा सेवा";
+document.getElementById("carTitle").innerHTML="कार टैक्सी";
+document.getElementById("carText").innerHTML="लंबी दूरी यात्रा सेवा";
 
 }
 
 if(lang==="en"){
-document.getElementById
+document.getElementById("title").innerHTML="Gaon Sarthi";
+document.getElementById("tagline").innerHTML="Delivery | Bike Taxi | Car Taxi";
 
-("title").innerHTML="Gaon Sarthi";
-document.getElementById
+document.getElementById("deliveryTitle").innerHTML="Village Delivery";
+document.getElementById("deliveryText").innerHTML="Groceries, vegetables and medicines at home";
 
-("tagline").innerHTML="Delivery | 
+document.getElementById("bikeTitle").innerHTML="Bike Taxi";
+document.getElementById("bikeText").innerHTML="Quick ride from village to market";
 
-Bike Taxi | Car Taxi";
-
-document.getElementById
-
-("deliveryTitle").innerHTML="Village 
-
-Delivery";
-document.getElementById
-
-("deliveryText").innerHTML="Groceries
-
-, vegetables and medicines at home";
-
-document.getElementById
-
-("bikeTitle").innerHTML="Bike Taxi";
-document.getElementById
-
-("bikeText").innerHTML="Quick ride 
-
-from village to market";
-
-document.getElementById
-
-("carTitle").innerHTML="Car Taxi";
-document.getElementById
-
-("carText").innerHTML="Car service 
-
-for long distance travel";
+document.getElementById("carTitle").innerHTML="Car Taxi";
+document.getElementById("carText").innerHTML="Car service for long distance travel";
 }
 
 }
