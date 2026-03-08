@@ -1,65 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Driver Join</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Gaon Sarthi</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<h2>Driver Registration</h2>
+<header class="topbar">
 
-<form id="driverForm">
+<h2>Gaon Sarthi</h2>
 
-Name<br>
-<input type="text" id="name" required><br><br>
+</header>
 
-Mobile<br>
-<input type="text" id="mobile" required><br><br>
+<div class="searchbox">
 
-Vehicle Type<br>
-<select id="vehicle">
-<option>Bike</option>
-<option>Auto</option>
-<option>Car</option>
-</select><br><br>
+<input type="text" placeholder="Enter pickup location">
 
-Area<br>
-<input type="text" id="area"><br><br>
+<input type="text" placeholder="Enter destination">
 
-<button type="submit">Submit</button>
+</div>
 
-</form>
+<div class="services">
 
-<script>
+<a href="bike.html" class="service">
 
-document.getElementById("driverForm").addEventListener("submit",function(e){
+<img src="images/bike.png">
 
-e.preventDefault();
+<p>Bike</p>
 
-fetch("YOUR_GOOGLE_SCRIPT_URL",{
+</a>
 
-method:"POST",
+<a href="auto.html" class="service">
 
-body:JSON.stringify({
+<img src="images/auto.png">
 
-name:document.getElementById("name").value,
+<p>Auto</p>
 
-mobile:document.getElementById("mobile").value,
+</a>
 
-vehicle:document.getElementById("vehicle").value,
+<a href="car.html" class="service">
 
-area:document.getElementById("area").value
+<img src="images/car.png">
 
-})
+<p>Car</p>
 
-})
+</a>
 
-alert("Driver Registered Successfully")
+<a href="delivery.html" class="service">
 
-})
+<img src="images/delivery.png">
 
-</script>
+<p>Delivery</p>
+
+</a>
+
+</div>
+
+<div class="book">
+
+<a href="https://wa.me/919792497071?text=Ride%20Booking">
+
+<button>Book Ride</button>
+
+</a>
+
+</div>
 
 </body>
 </html>
