@@ -1,60 +1,60 @@
-﻿body{
-font-family: Arial, sans-serif;
+body{
 margin:0;
-background:#f2f2f2;
+font-family:Arial;
+background:#f5f5f5;
 }
 
-header{
-background:linear-gradient(green,darkgreen);
+.topbar{
+background:#009933;
 color:white;
-text-align:center;
-padding:25px;
-}
-
-.menu{
-background:#222;
-padding:12px;
+padding:15px;
 text-align:center;
 }
 
-.menu a{
-color:white;
-margin:15px;
-text-decoration:none;
-font-size:18px;
+.searchbox{
+padding:15px;
 }
 
-.container{
-padding:30px;
-text-align:center;
-}
-
-.card{
-background:white;
-padding:20px;
-margin:20px auto;
-max-width:500px;
-border-radius:10px;
-box-shadow:0 0 10px #ccc;
-}
-
-.card img{
+.searchbox input{
 width:100%;
+padding:10px;
+margin-bottom:10px;
 border-radius:8px;
+border:1px solid #ccc;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+padding:15px;
+}
+
+.service{
+background:white;
+padding:15px;
+text-align:center;
+border-radius:10px;
+text-decoration:none;
+color:black;
+box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+.service img{
+width:60px;
+}
+
+.book{
+padding:20px;
+text-align:center;
 }
 
 button{
-background:green;
+background:#009933;
 color:white;
-padding:12px 25px;
 border:none;
-border-radius:6px;
-font-size:16px;
-cursor:pointer;
-}
-
-.lang{
-position:absolute;
-right:20px;
-top:20px;
+padding:15px;
+width:100%;
+font-size:18px;
+border-radius:10px;
 }
