@@ -1,134 +1,65 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-
-<title>Driver Join | Gaon Sarthi</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<style>
-
-body{
-font-family:Arial;
-margin:0;
-background:#f2f2f2;
-}
-
-header{
-background:linear-gradient(green,darkgreen);
-color:white;
-text-align:center;
-padding:20px;
-}
-
-.container{
-padding:30px;
-text-align:center;
-}
-
-.card{
-background:white;
-padding:20px;
-max-width:400px;
-margin:auto;
-border-radius:10px;
-box-shadow:0 0 10px #ccc;
-}
-
-input, select{
-width:90%;
-padding:10px;
-margin-top:5px;
-}
-
-button{
-background:green;
-color:white;
-padding:12px 25px;
-border:none;
-border-radius:6px;
-margin-top:10px;
-cursor:pointer;
-}
-
-</style>
-
-<script>
-
-function sendWhatsApp(){
-
-var name=document.getElementById("name").value;
-var mobile=document.getElementById("mobile").value;
-var vehicle=document.getElementById("vehicle").value;
-var area=document.getElementById("area").value;
-
-var message="Driver Registration%0A"
-+"Name: "+name+"%0A"
-+"Mobile: "+mobile+"%0A"
-+"Vehicle: "+vehicle+"%0A"
-+"Area: "+area;
-
-window.open("https://wa.me/919792497071?text="+message);
-
-}
-
-</script>
-
+<title>Driver Join</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-
-<h1>Gaon Sarthi</h1>
-
-<p>Driver Join / ड्राइवर जुड़ें</p>
-
-</header>
-
-<div class="container">
-
-<div class="card">
-
 <h2>Driver Registration</h2>
 
-Name / नाम<br>
+<form id="driverForm">
 
-<input type="text" id="name">
+Name<br>
+<input type="text" id="name" required><br><br>
 
-<br><br>
+Mobile<br>
+<input type="text" id="mobile" required><br><br>
 
-Mobile / मोबाइल<br>
-
-<input type="text" id="mobile">
-
-<br><br>
-
-Vehicle Type / वाहन<br>
-
+Vehicle Type<br>
 <select id="vehicle">
-
 <option>Bike</option>
-
+<option>Auto</option>
 <option>Car</option>
+</select><br><br>
 
-</select>
+Area<br>
+<input type="text" id="area"><br><br>
 
-<br><br>
+<button type="submit">Submit</button>
 
-Area / क्षेत्र<br>
+</form>
 
-<input type="text" id="area">
+<script>
 
-<br><br>
+document.getElementById("driverForm").addEventListener("submit",function(e){
 
-<button onclick="sendWhatsApp()">Submit</button>
+e.preventDefault();
 
-</div>
+fetch("YOUR_GOOGLE_SCRIPT_URL",{
 
-</div>
+method:"POST",
+
+body:JSON.stringify({
+
+name:document.getElementById("name").value,
+
+mobile:document.getElementById("mobile").value,
+
+vehicle:document.getElementById("vehicle").value,
+
+area:document.getElementById("area").value
+
+})
+
+})
+
+alert("Driver Registered Successfully")
+
+})
+
+</script>
 
 </body>
-
 </html>
