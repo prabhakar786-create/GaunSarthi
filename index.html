@@ -1,103 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-<title>Gaon Sarthi</title>
-
+<title>Driver Join</title>
 <link rel="stylesheet" href="style.css">
-
-<script src="lang.js"></script>
-
 </head>
 
 <body>
 
-<header>
+<h2>Driver Registration</h2>
 
-<h1 id="title">Gaon Sarthi</h1>
+<form id="driverForm">
 
-<p id="tagline">Delivery | Bike Taxi | Car Taxi</p>
+Name<br>
+<input type="text" id="name" required><br><br>
 
-<div class="lang">
+Mobile<br>
+<input type="text" id="mobile" required><br><br>
 
-<button onclick="setLang('en')">English</button>
+Vehicle Type<br>
+<select id="vehicle">
+<option>Bike</option>
+<option>Auto</option>
+<option>Car</option>
+</select><br><br>
 
-<button onclick="setLang('hi')">हिंदी</button>
+Area<br>
+<input type="text" id="area"><br><br>
 
-</div>
+<button type="submit">Submit</button>
 
-</header>
+</form>
 
-<div class="menu">
+<script>
 
-<a href="index.html">Home</a>
+document.getElementById("driverForm").addEventListener("submit",function(e){
 
-<a href="delivery.html">Delivery</a>
+e.preventDefault();
 
-<a href="bike.html">Bike Taxi</a>
+fetch("YOUR_GOOGLE_SCRIPT_URL",{
 
-<a href="car.html">Car Taxi</a>
+method:"POST",
 
-<a href="driver.html">Driver Join</a>
+body:JSON.stringify({
 
-</div>
+name:document.getElementById("name").value,
 
-<div class="container">
+mobile:document.getElementById("mobile").value,
 
-<div class="card">
+vehicle:document.getElementById("vehicle").value,
 
-<img src="delivery.jpg">
+area:document.getElementById("area").value
 
-<h2 id="deliveryTitle">Village Delivery</h2>
+})
 
-<p id="deliveryText">Groceries delivered to your village</p>
+})
 
-<a href="https://wa.me/919415916230?text=Delivery Order">
+alert("Driver Registered Successfully")
 
-<button>Order Now</button>
+})
 
-</a>
-
-</div>
-
-<div class="card">
-
-<img src="bike.jpg">
-
-<h2 id="bikeTitle">Bike Taxi</h2>
-
-<p id="bikeText">Quick village transport</p>
-
-<a href="https://wa.me/919792497071?text=Bike Taxi Booking">
-
-<button>Book Bike</button>
-
-</a>
-
-</div>
-
-<div class="card">
-
-<img src="car.jpg">
-
-<h2 id="carTitle">Car Taxi</h2>
-
-<p id="carText">Car service for travel</p>
-
-<a href="https://wa.me/91979497071?text=Car Taxi Booking">
-
-<button>Book Car</button>
-
-</a>
-
-</div>
-
-</div>
+</script>
 
 </body>
 </html>
-
-
-
-
-
