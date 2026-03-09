@@ -12,69 +12,67 @@
 body{
 font-family:Arial;
 margin:0;
-background:#f4f4f4;
+background:#f5f5f5;
 }
 
 header{
 background:linear-gradient(green,darkgreen);
 color:white;
 text-align:center;
-padding:25px;
-}
-
-.menu{
-background:#222;
-padding:12px;
-text-align:center;
-}
-
-.menu a{
-color:white;
-margin:12px;
-text-decoration:none;
-font-size:18px;
+padding:20px;
 }
 
 .container{
-padding:20px;
+padding:15px;
+}
+
+.grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
 }
 
 .card{
 background:white;
-border-radius:10px;
 padding:15px;
+border-radius:10px;
 text-align:center;
-box-shadow:0 0 10px #ccc;
+box-shadow:0 0 10px #ddd;
 }
 
 .card img{
-width:100%;
-border-radius:8px;
+width:60px;
 }
 
 button{
 background:green;
 color:white;
-padding:10px 20px;
 border:none;
+padding:8px 15px;
 border-radius:6px;
-cursor:pointer;
-margin-top:10px;
+margin-top:8px;
 }
 
-button:hover{
-background:darkgreen;
-}
-
-.footer{
-background:#222;
-color:white;
-text-align:center;
-padding:15px;
+.map{
 margin-top:20px;
+}
+
+.bottomnav{
+position:fixed;
+bottom:0;
+width:100%;
+background:white;
+display:flex;
+justify-content:space-around;
+padding:10px;
+box-shadow:0 -2px 10px #ccc;
+}
+
+.bottomnav a{
+text-decoration:none;
+color:black;
+font-size:14px;
+text-align:center;
 }
 
 </style>
@@ -85,41 +83,25 @@ margin-top:20px;
 
 <header>
 
-<h1>Gaon Sarthi</h1>
+<h2>Gaon Sarthi</h2>
 
-<p>Village Delivery | Bike Taxi | Auto | Car Taxi</p>
+<p>Village Delivery & Taxi Service</p>
 
 </header>
 
-<div class="menu">
-
-<a href="index.html">Home</a>
-
-<a href="delivery.html">Delivery</a>
-
-<a href="bike.html">Bike Taxi</a>
-
-<a href="auto.html">Auto</a>
-
-<a href="car.html">Car Taxi</a>
-
-<a href="driver.html">Driver Join</a>
-
-</div>
-
 <div class="container">
+
+<div class="grid">
 
 <div class="card">
 
 <img src="delivery.jpg">
 
-<h2>Village Delivery</h2>
-
-<p>Groceries delivered to your village</p>
+<h3>Delivery</h3>
 
 <a href="delivery.html">
 
-<button>Order Now</button>
+<button>Order</button>
 
 </a>
 
@@ -129,13 +111,11 @@ margin-top:20px;
 
 <img src="bike.jpg">
 
-<h2>Bike Taxi</h2>
-
-<p>Quick village transport</p>
+<h3>Bike Taxi</h3>
 
 <a href="bike.html">
 
-<button>Book Bike</button>
+<button>Book</button>
 
 </a>
 
@@ -145,13 +125,11 @@ margin-top:20px;
 
 <img src="auto.jpg">
 
-<h2>Auto Rickshaw</h2>
-
-<p>Affordable ride for short distance</p>
+<h3>Auto</h3>
 
 <a href="auto.html">
 
-<button>Book Auto</button>
+<button>Book</button>
 
 </a>
 
@@ -161,13 +139,11 @@ margin-top:20px;
 
 <img src="car.jpg">
 
-<h2>Car Taxi</h2>
-
-<p>Comfortable ride for long distance</p>
+<h3>Car Taxi</h3>
 
 <a href="car.html">
 
-<button>Book Car</button>
+<button>Book</button>
 
 </a>
 
@@ -175,13 +151,34 @@ margin-top:20px;
 
 </div>
 
-<div class="footer">
+<div class="map">
 
-<p>Gaon Sarthi | Nanpara Village Transport and Parcel Delivery Service</p>
+<h3>Service Area Map</h3>
+
+<iframe
+src="https://maps.google.com/maps?q=Nanpara%20Bahraich&t=&z=13&ie=UTF8&iwloc=&output=embed"
+width="100%"
+height="300">
+</iframe>
+
+</div>
+
+</div>
+
+<div class="bottomnav">
+
+<a href="index.html">🏠 Home</a>
+
+<a href="fare-booking.html">📍 Book</a>
+
+<a href="driver.html">🚖 Driver</a>
+
+<a href="delivery.html">📦 Delivery</a>
+
+<a href="https://wa.me/919792497071">💬 Chat</a>
 
 </div>
 
 </body>
 
 </html>
-
