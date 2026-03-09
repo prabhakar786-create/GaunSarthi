@@ -3,7 +3,7 @@
 
 <head>
 
-<title>Gaon Sarthi</title>
+<title>Gaon Sarthi Super App</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -19,17 +19,14 @@ header{
 background:linear-gradient(green,darkgreen);
 color:white;
 text-align:center;
-padding:20px;
-}
-
-.container{
-padding:15px;
+padding:18px;
 }
 
 .grid{
 display:grid;
 grid-template-columns:repeat(2,1fr);
 gap:15px;
+padding:15px;
 }
 
 .card{
@@ -40,21 +37,17 @@ text-align:center;
 box-shadow:0 0 10px #ddd;
 }
 
-.card img{
-width:60px;
-}
-
 button{
 background:green;
 color:white;
 border:none;
 padding:8px 15px;
 border-radius:6px;
-margin-top:8px;
+margin-top:5px;
 }
 
-.map{
-margin-top:20px;
+.section{
+padding:15px;
 }
 
 .bottomnav{
@@ -68,14 +61,70 @@ padding:10px;
 box-shadow:0 -2px 10px #ccc;
 }
 
-.bottomnav a{
-text-decoration:none;
-color:black;
-font-size:14px;
-text-align:center;
+input,select{
+width:90%;
+padding:8px;
+margin-top:5px;
 }
 
 </style>
+
+<script>
+
+function getLocation(){
+
+if(navigator.geolocation){
+
+navigator.geolocation.getCurrentPosition(showPosition);
+
+}else{
+
+alert("Location not supported");
+
+}
+
+}
+
+function showPosition(position){
+
+document.getElementById("location").innerHTML=
+
+"Latitude: "+position.coords.latitude+
+"<br>Longitude: "+position.coords.longitude;
+
+}
+
+function calculateFare(){
+
+var distance=document.getElementById("distance").value;
+var vehicle=document.getElementById("vehicle").value;
+
+var fare=0;
+
+if(vehicle=="Bike") fare=distance*10;
+if(vehicle=="Auto") fare=distance*12;
+if(vehicle=="Car") fare=distance*15;
+
+document.getElementById("fare").innerHTML="Estimated Fare ₹ "+fare;
+
+}
+
+function bookRide(){
+
+var vehicle=document.getElementById("vehicle").value;
+var pickup=document.getElementById("pickup").value;
+var drop=document.getElementById("drop").value;
+
+var msg="Gaon Sarthi Ride Booking%0A"
++"Vehicle:"+vehicle+"%0A"
++"Pickup:"+pickup+"%0A"
++"Destination:"+drop;
+
+window.open("https://wa.me/919792497071?text="+msg);
+
+}
+
+</script>
 
 </head>
 
@@ -85,73 +134,89 @@ text-align:center;
 
 <h2>Gaon Sarthi</h2>
 
-<p>Village Delivery & Taxi Service</p>
+<p>Delivery • Bike • Auto • Car • Village Market</p>
 
 </header>
-
-<div class="container">
 
 <div class="grid">
 
 <div class="card">
-
-<img src="delivery.jpg">
-
 <h3>Delivery</h3>
-
-<a href="delivery.html">
-
-<button>Order</button>
-
-</a>
-
+<button onclick="window.location='delivery.html'">Order</button>
 </div>
 
 <div class="card">
-
-<img src="bike.jpg">
-
 <h3>Bike Taxi</h3>
-
-<a href="bike.html">
-
-<button>Book</button>
-
-</a>
-
+<button onclick="window.location='ride.html'">Book</button>
 </div>
 
 <div class="card">
-
-<img src="auto.jpg">
-
 <h3>Auto</h3>
-
-<a href="auto.html">
-
-<button>Book</button>
-
-</a>
-
+<button onclick="window.location='ride.html'">Book</button>
 </div>
 
 <div class="card">
-
-<img src="car.jpg">
-
 <h3>Car Taxi</h3>
-
-<a href="car.html">
-
-<button>Book</button>
-
-</a>
-
+<button onclick="window.location='ride.html'">Book</button>
 </div>
 
 </div>
 
-<div class="map">
+<div class="section">
+
+<h3>Ride Fare Calculator</h3>
+
+Vehicle<br>
+
+<select id="vehicle">
+
+<option>Bike</option>
+<option>Auto</option>
+<option>Car</option>
+
+</select>
+
+<br><br>
+
+Distance (km)<br>
+
+<input type="number" id="distance" onkeyup="calculateFare()">
+
+<br>
+
+<p id="fare"></p>
+
+</div>
+
+<div class="section">
+
+<h3>Book Ride</h3>
+
+Pickup<br>
+<input type="text" id="pickup">
+
+<br><br>
+
+Destination<br>
+<input type="text" id="drop">
+
+<br><br>
+
+<button onclick="bookRide()">Book Now</button>
+
+</div>
+
+<div class="section">
+
+<h3>Your Location</h3>
+
+<button onclick="getLocation()">Detect Location</button>
+
+<p id="location"></p>
+
+</div>
+
+<div class="section">
 
 <h3>Service Area Map</h3>
 
@@ -163,22 +228,15 @@ height="300">
 
 </div>
 
-</div>
-
 <div class="bottomnav">
 
 <a href="index.html">🏠 Home</a>
-
-<a href="fare-booking.html">📍 Book</a>
-
-<a href="driver.html">🚖 Driver</a>
-
+<a href="ride.html">🚖 Ride</a>
 <a href="delivery.html">📦 Delivery</a>
-
+<a href="marketplace.html">🛒 Market</a>
 <a href="https://wa.me/919792497071">💬 Chat</a>
 
 </div>
 
 </body>
-
 </html>
