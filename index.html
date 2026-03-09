@@ -3,131 +3,13 @@
 
 <head>
 
-<title>Gaon Sarthi</title>
+<title>Gaun Sarthi</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<style>
+<link rel="stylesheet" href="css/style.css">
 
-body{
-font-family:Arial;
-margin:0;
-background:#f4f4f4;
-}
-
-header{
-background:linear-gradient(green,darkgreen);
-color:white;
-text-align:center;
-padding:18px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:15px;
-padding:15px;
-}
-
-.card{
-background:white;
-padding:15px;
-border-radius:10px;
-text-align:center;
-box-shadow:0 0 10px #ddd;
-}
-
-.card img{
-width:60px;
-}
-
-button{
-background:green;
-color:white;
-border:none;
-padding:8px 15px;
-border-radius:6px;
-margin-top:8px;
-}
-
-.section{
-padding:15px;
-}
-
-input,select{
-width:95%;
-padding:8px;
-margin-top:5px;
-}
-
-.bottomnav{
-position:fixed;
-bottom:0;
-width:100%;
-background:white;
-display:flex;
-justify-content:space-around;
-padding:10px;
-box-shadow:0 -2px 10px #ccc;
-}
-
-</style>
-
-<script>
-
-function getLocation(){
-
-if(navigator.geolocation){
-
-navigator.geolocation.getCurrentPosition(function(pos){
-
-document.getElementById("pickup").value=
-pos.coords.latitude+","+pos.coords.longitude;
-
-});
-
-}else{
-
-alert("Location not supported");
-
-}
-
-}
-
-function calculateFare(){
-
-var distance=document.getElementById("distance").value;
-
-var vehicle=document.getElementById("vehicle").value;
-
-var fare=0;
-
-if(vehicle=="Bike") fare=distance*10;
-if(vehicle=="Auto") fare=distance*12;
-if(vehicle=="Car") fare=distance*15;
-
-document.getElementById("fare").innerHTML="Estimated Fare ₹ "+fare;
-
-}
-
-function bookRide(){
-
-var vehicle=document.getElementById("vehicle").value;
-
-var pickup=document.getElementById("pickup").value;
-
-var drop=document.getElementById("drop").value;
-
-var msg="Gaon Sarthi Ride Booking%0A"
-+"Vehicle:"+vehicle+"%0A"
-+"Pickup:"+pickup+"%0A"
-+"Destination:"+drop;
-
-window.open("https://wa.me/919792497071?text="+msg);
-
-}
-
-</script>
+<link rel="manifest" href="manifest.json">
 
 </head>
 
@@ -135,109 +17,50 @@ window.open("https://wa.me/919792497071?text="+msg);
 
 <header>
 
-<h2>Gaon Sarthi</h2>
+<img src="images/logo.png" width="80">
 
-<p>Delivery • Bike • Auto • Car</p>
+<h1>Gaun Sarthi</h1>
+
+<p>Village Ride & Delivery Platform</p>
 
 </header>
 
-<div class="grid">
+<div class="services">
 
-<div class="card">
+<a href="ride.html">
 
-<img src="delivery.jpg">
+<img src="images/ride.png">
 
-<h3>Delivery</h3>
+<p>Ride</p>
 
-</div>
+</a>
 
-<div class="card">
+<a href="delivery.html">
 
-<img src="bike.jpg">
+<img src="images/delivery.png">
 
-<h3>Bike Taxi</h3>
+<p>Delivery</p>
 
-</div>
+</a>
 
-<div class="card">
+<a href="driver.html">
 
-<img src="auto.jpg">
+<img src="images/bike.png">
 
-<h3>Auto</h3>
+<p>Driver</p>
 
-</div>
+</a>
 
-<div class="card">
+<a href="admin.html">
 
-<img src="car.jpg">
+<img src="images/car.png">
 
-<h3>Car Taxi</h3>
+<p>Admin</p>
 
-</div>
-
-</div>
-
-<div class="section">
-
-<h3>Ride Booking</h3>
-
-Vehicle<br>
-
-<select id="vehicle">
-
-<option>Bike</option>
-<option>Auto</option>
-<option>Car</option>
-
-</select>
-
-<br><br>
-
-Distance (km)<br>
-
-<input type="number" id="distance" onkeyup="calculateFare()">
-
-<p id="fare"></p>
-
-Pickup Location<br>
-
-<input type="text" id="pickup">
-
-<br><br>
-
-Destination<br>
-
-<input type="text" id="drop">
-
-<br><br>
-
-<button onclick="getLocation()">Auto Pickup</button>
-
-<button onclick="bookRide()">Book Ride</button>
-
-</div>
-
-<div class="section">
-
-<h3>Service Area Map</h3>
-
-<iframe
-src="https://maps.google.com/maps?q=Nanpara%20Bahraich&t=&z=13&ie=UTF8&iwloc=&output=embed"
-width="100%"
-height="300">
-</iframe>
-
-</div>
-
-<div class="bottomnav">
-
-<a href="index.html">🏠 Home</a>
-<a href="#">🚖 Ride</a>
-<a href="#">📦 Delivery</a>
-<a href="driver.html">🚗 Driver</a>
-<a href="https://wa.me/919792497071">💬 Chat</a>
+</a>
 
 </div>
 
 </body>
+
 </html>
