@@ -1,65 +1,57 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Driver Join</title>
-<link rel="stylesheet" href="style.css">
+
+<title>Driver Join | Gaon Sarthi</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:#f2f2f2;
+}
+
+header{
+background:green;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+.container{
+padding:30px;
+}
+
+</style>
+
 </head>
 
 <body>
 
-<h2>Driver Registration</h2>
+<header>
 
-<form id="driverForm">
+<h1>Gaon Sarthi</h1>
 
-Name<br>
-<input type="text" id="name" required><br><br>
+<p>Driver Join / ड्राइवर जुड़ें</p>
 
-Mobile<br>
-<input type="text" id="mobile" required><br><br>
+</header>
 
-Vehicle Type<br>
-<select id="vehicle">
-<option>Bike</option>
-<option>Auto</option>
-<option>Car</option>
-</select><br><br>
+<div class="container">
 
-Area<br>
-<input type="text" id="area"><br><br>
+<h2>Driver Registration Form</h2>
 
-<button type="submit">Submit</button>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdzFFauQ7AWd42oi-dZ6NwUJnHvaNAGMG0U_FMGx0Ur-SaaUg/viewform?usp=publish-editor"
+width="100%"
+height="700">
 
-</form>
+</iframe>
 
-<script>
-
-document.getElementById("driverForm").addEventListener("submit",function(e){
-
-e.preventDefault();
-
-fetch("YOUR_GOOGLE_SCRIPT_URL",{
-
-method:"POST",
-
-body:JSON.stringify({
-
-name:document.getElementById("name").value,
-
-mobile:document.getElementById("mobile").value,
-
-vehicle:document.getElementById("vehicle").value,
-
-area:document.getElementById("area").value
-
-})
-
-})
-
-alert("Driver Registered Successfully")
-
-})
-
-</script>
+</div>
 
 </body>
+
 </html>
