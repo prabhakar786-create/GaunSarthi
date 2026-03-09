@@ -1,223 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>Gaon Sarthi</title>
-
-<link rel="stylesheet" href="style.css">
-
-</head>
-
-<body>
-
-<header class="topbar">
-
-<h2>Gaon Sarthi</h2>
-
-</header>
-
-<div class="searchbox">
-
-<input type="text" placeholder="Enter pickup location">
-
-<input type="text" placeholder="Enter destination">
-
-</div>
-
-<div class="services">
-
-<a href="bike.html" class="service">
-
-<img src="bike.jpg">
-
-<p>Bike</p>
-
-</a>
-
-<a href="auto.html" class="service">
-
-<img src="auto.jpg">
-
-<p>Auto</p>
-
-</a>
-
-<a href="car.html" class="service">
-
-<img src="car.jpg">
-
-<p>Car</p>
-
-</a>
-
-<a href="delivery.html" class="service">
-
-<img src="delivery.jpg">
-
-<p>Delivery</p>
-
-</a>
-
-</div>
-<head>
-
-<title>Taxi Booking | Gaon Sarthi</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<style>
-
-body{
-font-family:Arial;
-margin:0;
-background:#f2f2f2;
-}
-
-header{
-background:linear-gradient(green,darkgreen);
-color:white;
-text-align:center;
-padding:20px;
-}
-
-.container{
-padding:30px;
-text-align:center;
-}
-
-.card{
-background:white;
-padding:20px;
-max-width:450px;
-margin:auto;
-border-radius:10px;
-box-shadow:0 0 10px #ccc;
-}
-
-input,select{
-width:90%;
-padding:10px;
-margin-top:5px;
-}
-
-button{
-background:green;
-color:white;
-padding:12px 25px;
-border:none;
-border-radius:6px;
-margin-top:15px;
-cursor:pointer;
-}
-
-</style>
-
-<script>
-
-function bookRide(){
-
-var name=document.getElementById("name").value;
-
-var mobile=document.getElementById("mobile").value;
-
-var pickup=document.getElementById("pickup").value;
-
-var drop=document.getElementById("drop").value;
-
-var vehicle=document.getElementById("vehicle").value;
-
-var message="Taxi Booking%0A"
-+"Name: "+name+"%0A"
-+"Mobile: "+mobile+"%0A"
-+"Vehicle: "+vehicle+"%0A"
-+"Pickup: "+pickup+"%0A"
-+"Destination: "+drop;
-
-window.open("https://wa.me/919792497071?text="+message);
-
-}
-
-</script>
-
-</head>
-
-<body>
-
-<header>
-
-<h1>Gaon Sarthi</h1>
-
-<p>Bike Taxi | Car Taxi Booking</p>
-
-</header>
-
-<div class="container">
-
-<div class="card">
-
-<h2>Book Ride</h2>
-
-Name<br>
-<input type="text" id="name">
-
-<br><br>
-
-Mobile<br>
-<input type="text" id="mobile">
-
-<br><br>
-
-Vehicle Type<br>
-
-<select id="vehicle">
-
-<option>Bike</option>
-
-<option>Car</option>
-
-</select>
-
-<br><br>
-
-Pickup Location<br>
-<input type="text" id="pickup">
-
-<br><br>
-
-Destination<br>
-<input type="text" id="drop">
-
-<br><br>
-<a href="fare-booking.html">Book Ride</a>
-  <br><br>
-<button onclick="bookRide()">Book on WhatsApp</button>
-
-</div>
-
-</div>
-
-</body>
-
-</html>
-
-<div class="book">
-
-<a href="https://wa.me/919792497071?text=Ride%20Booking">
-
-<button>Book Ride</button>
-
-</a>
-
-</div>
-<!DOCTYPE html>
 <html>
 
 <head>
 
-<title>Taxi Booking | Gaon Sarthi</title>
+<title>Gaon Sarthi</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -226,74 +12,72 @@ Destination<br>
 body{
 font-family:Arial;
 margin:0;
-background:#f2f2f2;
+background:#f4f4f4;
 }
 
 header{
 background:linear-gradient(green,darkgreen);
 color:white;
 text-align:center;
-padding:20px;
+padding:25px;
+}
+
+.menu{
+background:#222;
+padding:12px;
+text-align:center;
+}
+
+.menu a{
+color:white;
+margin:12px;
+text-decoration:none;
+font-size:18px;
 }
 
 .container{
-padding:30px;
-text-align:center;
+padding:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
 .card{
 background:white;
-padding:20px;
-max-width:450px;
-margin:auto;
 border-radius:10px;
+padding:15px;
+text-align:center;
 box-shadow:0 0 10px #ccc;
 }
 
-input,select{
-width:90%;
-padding:10px;
-margin-top:5px;
+.card img{
+width:100%;
+border-radius:8px;
 }
 
 button{
 background:green;
 color:white;
-padding:12px 25px;
+padding:10px 20px;
 border:none;
 border-radius:6px;
-margin-top:15px;
 cursor:pointer;
+margin-top:10px;
+}
+
+button:hover{
+background:darkgreen;
+}
+
+.footer{
+background:#222;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:20px;
 }
 
 </style>
-
-<script>
-
-function bookRide(){
-
-var name=document.getElementById("name").value;
-
-var mobile=document.getElementById("mobile").value;
-
-var pickup=document.getElementById("pickup").value;
-
-var drop=document.getElementById("drop").value;
-
-var vehicle=document.getElementById("vehicle").value;
-
-var message="Taxi Booking%0A"
-+"Name: "+name+"%0A"
-+"Mobile: "+mobile+"%0A"
-+"Vehicle: "+vehicle+"%0A"
-+"Pickup: "+pickup+"%0A"
-+"Destination: "+drop;
-
-window.open("https://wa.me/919792497071?text="+message);
-
-}
-
-</script>
 
 </head>
 
@@ -303,67 +87,84 @@ window.open("https://wa.me/919792497071?text="+message);
 
 <h1>Gaon Sarthi</h1>
 
-<p>Bike Taxi | Car Taxi Booking</p>
+<p>Village Delivery | Bike Taxi | Car Taxi</p>
 
 </header>
+
+<div class="menu">
+
+<a href="index.html">Home</a>
+
+<a href="delivery.html">Delivery</a>
+
+<a href="bike.html">Bike Taxi</a>
+
+<a href="car.html">Car Taxi</a>
+
+<a href="driver.html">Driver Join</a>
+
+<a href="fare-booking.html">Book Ride</a>
+
+</div>
 
 <div class="container">
 
 <div class="card">
 
-<h2>Book Ride</h2>
+<img src="delivery.jpg">
 
-Name<br>
-<input type="text" id="name">
+<h2>Village Delivery</h2>
 
-<br><br>
+<p>Groceries and essentials delivered to your village</p>
 
-Mobile<br>
-<input type="text" id="mobile">
+<a href="delivery.html">
 
-<br><br>
+<button>Order Now</button>
 
-Vehicle Type<br>
-
-<select id="vehicle">
-
-<option>Bike</option>
-
-<option>Car</option>
-
-</select>
-
-<br><br>
-
-Pickup Location<br>
-<input type="text" id="pickup">
-
-<br><br>
-
-Destination<br>
-<input type="text" id="drop">
-
-<br><br>
-<a href="fare-booking.html">Book Ride</a>
-  <br><br>
-<button onclick="bookRide()">Book on WhatsApp</button>
+</a>
 
 </div>
+
+<div class="card">
+
+<img src="bike.jpg">
+
+<h2>Bike Taxi</h2>
+
+<p>Quick ride from village to market</p>
+
+<a href="bike.html">
+
+<button>Book Bike</button>
+
+</a>
+
+</div>
+
+<div class="card">
+
+<img src="car.jpg">
+
+<h2>Car Taxi</h2>
+
+<p>Comfortable car rides for long distance</p>
+
+<a href="car.html">
+
+<button>Book Car</button>
+
+</a>
+
+</div>
+
+</div>
+
+<div class="footer">
+
+<p>Gaon Sarthi | Nanpara Village Transport Service</p>
 
 </div>
 
 </body>
 
 </html>
-
-
-</body>
-</html>
-
-
-
-
-
-
-
-
