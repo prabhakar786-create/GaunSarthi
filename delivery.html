@@ -1,18 +1,21 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-<title>Delivery - Gaon Sarthi</title>
-</head>
+<h2>Parcel / Grocery Delivery</h2>
 
-<body>
+<input id="pickup" placeholder="Pickup Address">
 
-<h2>Village Delivery Service</h2>
+<input id="drop" placeholder="Delivery Address">
 
-<p>हम आपके गांव तक किराना, सब्जी और दवा पहुंचाते हैं।</p>
+<select id="type">
 
-<a href="https://wa.me/91XXXXXXXXXX?text=Delivery%20Order">
-<button>Order on WhatsApp</button>
-</a>
+<option>Parcel</option>
+<option>Food</option>
+<option>Grocery</option>
 
-</body>
-</html>
+</select>
+
+<button onclick="bookDelivery()">Book Delivery</button>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+<script src="firebase.js"></script>
+<script src="delivery.js"></script>
