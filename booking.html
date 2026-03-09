@@ -1,69 +1,142 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Ride Booking</title>
-<link rel="stylesheet" href="style.css">
+
+<title>Taxi Booking | Gaon Sarthi</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:#f2f2f2;
+}
+
+header{
+background:linear-gradient(green,darkgreen);
+color:white;
+text-align:center;
+padding:20px;
+}
+
+.container{
+padding:30px;
+text-align:center;
+}
+
+.card{
+background:white;
+padding:20px;
+max-width:450px;
+margin:auto;
+border-radius:10px;
+box-shadow:0 0 10px #ccc;
+}
+
+input,select{
+width:90%;
+padding:10px;
+margin-top:5px;
+}
+
+button{
+background:green;
+color:white;
+padding:12px 25px;
+border:none;
+border-radius:6px;
+margin-top:15px;
+cursor:pointer;
+}
+
+</style>
+
+<script>
+
+function bookRide(){
+
+var name=document.getElementById("name").value;
+
+var mobile=document.getElementById("mobile").value;
+
+var pickup=document.getElementById("pickup").value;
+
+var drop=document.getElementById("drop").value;
+
+var vehicle=document.getElementById("vehicle").value;
+
+var message="Taxi Booking%0A"
++"Name: "+name+"%0A"
++"Mobile: "+mobile+"%0A"
++"Vehicle: "+vehicle+"%0A"
++"Pickup: "+pickup+"%0A"
++"Destination: "+drop;
+
+window.open("https://wa.me/919792497071?text="+message);
+
+}
+
+</script>
+
 </head>
 
 <body>
 
+<header>
+
+<h1>Gaon Sarthi</h1>
+
+<p>Bike Taxi | Car Taxi Booking</p>
+
+</header>
+
+<div class="container">
+
+<div class="card">
+
 <h2>Book Ride</h2>
 
-<form id="rideForm">
+Name<br>
+<input type="text" id="name">
 
-Pickup Location<br>
-<input type="text" id="pickup"><br><br>
+<br><br>
 
-Drop Location<br>
-<input type="text" id="drop"><br><br>
+Mobile<br>
+<input type="text" id="mobile">
+
+<br><br>
 
 Vehicle Type<br>
+
 <select id="vehicle">
+
 <option>Bike</option>
-<option>Auto</option>
+
 <option>Car</option>
+
 </select>
 
 <br><br>
 
-Mobile Number<br>
-<input type="text" id="phone">
+Pickup Location<br>
+<input type="text" id="pickup">
 
 <br><br>
 
-<button type="submit">Book Ride</button>
+Destination<br>
+<input type="text" id="drop">
 
-</form>
+<br><br>
 
-<script>
+<button onclick="bookRide()">Book Now</button>
 
-document.getElementById("rideForm").addEventListener("submit",function(e){
+</div>
 
-e.preventDefault();
-
-fetch("YOUR_GOOGLE_SCRIPT_URL",{
-
-method:"POST",
-
-body:JSON.stringify({
-
-pickup:document.getElementById("pickup").value,
-
-drop:document.getElementById("drop").value,
-
-vehicle:document.getElementById("vehicle").value,
-
-phone:document.getElementById("phone").value
-
-})
-
-})
-
-alert("Ride Request Sent")
-
-})
-
-</script>
+</div>
 
 </body>
+
 </html>
