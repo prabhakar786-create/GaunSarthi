@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Book Ride</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet"
+href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+</head>
+
+<body>
+
+<h2>Book Ride</h2>
+
+<div id="map"></div>
+
+<input id="pickup" placeholder="Pickup Location">
+
+<input id="drop" placeholder="Drop Location">
+
+<select id="vehicle">
+
+<option value="bike">Bike</option>
+<option value="auto">Auto</option>
+<option value="car">Car</option>
+
+</select>
+
+<button onclick="getLocation()">Use My Location</button>
+
+<button onclick="bookRide()">Confirm Ride</button>
+
+<button onclick="payUPI()">Pay with UPI</button>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+<script src="firebase.js"></script>
+<script src="map.js"></script>
+<script src="ride.js"></script>
+<script src="payment.js"></script>
+
+</body>
+
+</html>
