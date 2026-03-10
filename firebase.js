@@ -1,21 +1,13 @@
-const firebaseConfig = {
-
-apiKey:"YOUR_API_KEY",
-
-authDomain:"gaunsarthi.firebaseapp.com",
-
-databaseURL:"https://gaunsarthi-default-rtdb.firebaseio.com",
-
-projectId:"gaunsarthi",
-
-storageBucket:"gaunsarthi.appspot.com",
-
-messagingSenderId:"12345",
-
-appId:"APP_ID"
-
+var firebaseConfig = {
+  apiKey: "AIzaSyDymxns52LEvvBwTjdQ2oWIdE_sgd0Ti56Bw",
+  authDomain: "rthi-9da8f.firebaseapp.com",
+  databaseURL: "https://rthi-9da8f-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "rthi-9da8f",
+  storageBucket: "rthi-9da8f.appspot.com",
+  messagingSenderId: "554508031447",
+  appId: "1:554508031447:web:9401f3e10adce52b03e792"
 };
 
 firebase.initializeApp(firebaseConfig);
 
-const db = firebase.database();
+var db = firebase.database();
