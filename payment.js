@@ -1,6 +1,6 @@
 function payUPI(){
 
-let upi="prabhakar@upi"
+let upi="prabhakar786-1@okhdfcbank"
 
 let amount=120
 
